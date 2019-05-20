@@ -5,7 +5,7 @@ window.onload = function() {
 
 	var music_div = document.getElementById("music_div");
 	var music = document.getElementById("music");
-	var music_c = true;
+	var music_c = 0;
 	
 
   
@@ -55,11 +55,12 @@ window.onload = function() {
          
 				 
 				//自动触发事件click来躲避自动播放限制
-// 				var myEvent  = new Event('click'); 
-// 				music_div.dispatchEvent(myEvent);
+				var myEvent  = new Event('click'); 
+				music_div.dispatchEvent(myEvent);
 // 
-        music.play();
-				music_div.style.display = "block";
+        music_div.style.display = "block";
+			
+				
 
 			}
 
