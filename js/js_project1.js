@@ -280,10 +280,12 @@ window.onload = function() {
 				_equal.style.fontSize = '1em';
 			}
 		} else {
+			_p5_dialog.style.display='block';
 			_p5_dialog.show();
 			if (_grade > 250) {
 				_p5_dialog_result.innerText = '结果：优';
 				_p5_dialog_img.src = "img_project1/p5_dialog_you.png";
+				
 			} else if (_grade > 199) {
 				_p5_dialog_result.innerText = '结果：良';
 				_p5_dialog_img.src = "img_project1/p5_dialog_liang.png";
@@ -300,6 +302,7 @@ window.onload = function() {
 
 	_p5_dialog.onclick = function() {
 		_p5_dialog.close();
+		_p5_dialog.style.display='none';
 	}
 
 	_clean.onclick = function() {
