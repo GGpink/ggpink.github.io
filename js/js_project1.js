@@ -19,7 +19,7 @@ window.onload = function() {
 	
 	
 	var music = document.getElementById("music");
-	var music_c = 0;
+	var music_c = 1;
 	
 
   
