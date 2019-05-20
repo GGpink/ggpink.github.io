@@ -103,7 +103,9 @@ html,body{
 	font-family: "微软雅黑";
 	font-weight: bold;
 	font-size: 1.5rem;
+	transition: all .3s ease;
 }
+
 
 /*page02*/
 .box2_1{
@@ -307,21 +309,21 @@ html,body{
 /*page04*/
 .box4_1{
 	width: 100%;
-	height: 52%;
+	/* height: 52%; */
 	position: relative;
 	overflow: hidden;
 }
 .box4_1 img:nth-child(1){
     width: 14rem;
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     left: calc(50% - 6.5rem);
 }
 
 .box4_1 img:nth-child(2){
     width: 10rem;
     position: absolute;
-    top: 13rem;
+    top: 12rem;
     left: 0.5rem;
     animation: left_in 1s ease both;
     
@@ -353,7 +355,7 @@ html,body{
 .box4_1 img:nth-child(3){
    width: 19rem;
     position: absolute;
-    top: 1.3rem;
+    top: 0.3rem;
     left: 1.5rem;
     animation: top_in 1s ease both;
     animation-delay: 2s;
@@ -361,21 +363,21 @@ html,body{
 .box4_1 img:nth-child(4){
     width: 18rem;
     position: absolute;
-    top: 12.5rem;
+    top: 11.5rem;
     left: 4rem;
     animation: right_in 1s ease both;
     animation-delay: 1s;
 }
 .box4_2{
     width: 100%;
-    height: 25%;
+    /* height: 25%; */
     overflow: hidden;
-    padding-left: calc(50% - 9rem);
+    padding-left: calc(50% - 8rem);
     animation: flash 1s ease both;
     animation-delay: 3s;
 }
 .box4_2 img{
-	width: 18rem;
+	width: 16rem;
 }
 
 .box4_3{
@@ -426,7 +428,7 @@ html,body{
     color: black;
 }
 #p4_dialog{
-	display:none;
+	display: none;
 	width: 23.4375rem;
 	height: 100%;
 	position: absolute;
