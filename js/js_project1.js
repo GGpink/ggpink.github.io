@@ -9,6 +9,13 @@ window.onload = function() {
 
 	var music_div = document.getElementById("music_div");
 
+  
+// 	music_div.innerHTML='<audio src="media_project1/bgm.mp3" loop="loop" id="music"></audio>';
+// 	
+// 	window.addEventListener('touchstart',function(){
+// 		 music.play();
+// 	});  
+			 
 	
 	
 	var music = document.getElementById("music");
@@ -71,8 +78,10 @@ window.onload = function() {
 					loadingnum.style.transform='scale(1)';
 					
 					loadingnum.onclick=function(){
+					
 						pageTop(index);
 						music_div.style.display = "block";
+            music.play();
 
 					}
 					
@@ -87,12 +96,7 @@ window.onload = function() {
 // 				var myEvent  = new Event('click'); 
 // 				music_div.dispatchEvent(myEvent);
 
-// 	music_div.innerHTML='<audio src="media_project1/bgm.mp3" loop="loop" id="music"></audio>';
-// 	
-// 	window.addEventListener('touchstart',function(){
-// 		 music.play();
-// 	});  
-			 
+
 			
 				
 
