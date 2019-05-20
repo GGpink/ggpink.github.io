@@ -1,0 +1,565 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.show{
+	width: 23.4375rem;
+	height: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.page{
+	
+	width: 23.4375rem;
+	height: 100%;
+	position: absolute;
+	background: url(../img_project1/bj.png)no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+@keyframes flash{
+	from{
+		opacity: 0;
+		visibility: hidden;
+	}
+	to{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+
+/*music*/
+#music_div{	
+	width: 3rem;
+	height: 3rem;	
+	background: url(../img_project1/bgm_on.png)no-repeat;
+	background-size: 100% 100%;	
+	position: fixed;
+	top: 0.1rem;
+	left: calc(50% + 8rem);
+	z-index: 100;
+	display: none;
+	animation: yao 2s linear infinite alternate;
+}
+
+@keyframes yao{
+	from{
+		transform: rotate(90deg);
+	}
+	50%{
+		transform: rotate(0deg);
+	}	
+	to{
+		transform: rotate(-90deg);
+	}
+}
+
+/*page01*/
+
+.box1{
+	position: relative;
+	text-align: center;
+	margin-top: 30%;
+}
+
+.box1 img{
+	width: 11rem;
+	margin-left: 2rem;
+}
+
+.box1 p{
+	font-family: "微软雅黑";
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+.box1 span{
+	width: 1.4rem;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 15.5rem;
+	left: calc(50% + 6rem);
+	overflow: hidden;
+	animation: dian 1s linear infinite;
+}
+
+@keyframes dian{
+	from{
+		width: 0rem;
+	}
+	to{
+		width: 1.4rem;
+	}
+}
+
+.box1 h2{
+	font-family: "微软雅黑";
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+/*page02*/
+.box2_1{
+	position: relative;
+	/* height: 35%; */
+	
+}
+.box2_1 img:nth-child(1){
+	width: 23.4375rem;
+}
+.box2_1 img:nth-child(2){
+	width: 6rem;
+    position: absolute;
+    top: 7rem;
+    left: 6.5rem;
+    animation: lun_zhuang 1s linear infinite;
+}
+.box2_1 img:nth-child(3){
+	width: 5rem;
+    position: absolute;
+    top: 8rem;
+    left: 14rem;
+    animation: lun_zhuang 1s linear infinite;
+}
+
+@keyframes lun_zhuang{	
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+.box2_2{
+	position: relative;
+	text-align: center;
+	/* height: 40%; */
+}
+.p2_text{
+	position: absolute;
+	left: 6.5rem;
+	top: 2rem;
+}
+.p2_text p{
+	font-family: "微软雅黑";
+	font-weight: bold;
+	font-size: 0.98rem;
+	animation: flash 1s ease both;
+	animation-delay: 1s;
+}
+.p2_text p:nth-child(2){
+	animation-delay: 2s;
+}
+.p2_text p:nth-child(3){
+	animation-delay: 3s;
+}
+.p2_text p:nth-child(4){
+	animation-delay: 4s;
+}
+.p2_text p:nth-child(5){
+	animation-delay: 5s;
+}
+.p2_text p:nth-child(6){
+	animation-delay: 6s;
+}
+
+.box2_2 img{
+	width: 20rem;
+}
+
+.box2_3{
+	/* height: 20%; */
+	text-align: center;
+}
+.box2_3 img{
+	width: 20rem;
+}
+
+.box2_4{
+	position: absolute;
+	bottom: 0.1rem;
+	left: calc(50% - 1rem);
+	/* height: 5%; */
+	animation: flash 1s ease both;
+	animation-delay: 7s;
+}
+.box2_4 img{
+	width: 2rem;
+	animation: tiao 1s infinite linear;
+}
+
+@keyframes tiao{
+	from{
+		transform: translateY(0);
+	}
+	to{
+		transform: translateY(10px);
+	}
+}
+
+/*page03*/
+
+
+.box3_1{
+	width: 100%;
+	height: 100%;
+	background: url(../img_project1/p3_box1.png)no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	animation: zou 1s ease both;
+}
+.box3_1 img{
+	width: 13rem;
+	margin: 4rem 1rem;
+	animation: flash 1s ease both;
+	animation-delay: 1s;
+}
+
+@keyframes zou{
+	from{
+		left: 100%;
+	}
+	to{
+		left: 0%;
+	}
+}
+@keyframes you{
+	from{
+		left: -100%;
+	}
+	to{
+		left: 0%;
+	}
+}
+
+.box3_2{
+	width: 100%;
+	height: 100%;
+	background: url(../img_project1/p3_box2.png)no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	animation: you 1s ease both;
+	animation-delay: 2s;
+}
+.box3_2 img{
+	width: 13rem;
+	position: absolute;
+	bottom: 22%;
+	left: calc(50% - 2rem);
+	animation: flash 1s ease both;
+	animation-delay: 3s;
+}
+
+.box3_3{
+	position: absolute;
+	bottom: 0.1rem;
+	left: calc(50% - 1rem);
+	animation: flash 1s ease both;
+	animation-delay: 4s;
+}
+.box3_3 img{
+	width: 2rem;
+	animation: tiao  1s infinite linear;
+}
+
+
+
+/*style2*/
+@keyframes  flash{
+	from{
+		opacity: 0;
+		visibility: hidden;
+	}
+	to{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	height: 100%;
+}
+.show{
+	width: 23.4375rem;
+	height: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.page{
+	width: 23.4375rem;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	background: url(../img_project1/bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+/*page04*/
+.box4_1{
+	width: 100%;
+	height: 52%;
+	position: relative;
+	overflow: hidden;
+}
+.box4_1 img:nth-child(1){
+    width: 14rem;
+    position: absolute;
+    top: 3rem;
+    left: calc(50% - 6.5rem);
+}
+
+.box4_1 img:nth-child(2){
+    width: 10rem;
+    position: absolute;
+    top: 13rem;
+    left: 0.5rem;
+    animation: left_in 1s ease both;
+    
+}
+@keyframes left_in{
+	from{
+		transform: translateX(-100%);
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+@keyframes right_in{
+	from{
+		transform: translateX(110%);
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+@keyframes top_in{
+	from{
+		transform: translateY(-110%);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+.box4_1 img:nth-child(3){
+   width: 19rem;
+    position: absolute;
+    top: 1.3rem;
+    left: 1.5rem;
+    animation: top_in 1s ease both;
+    animation-delay: 2s;
+}
+.box4_1 img:nth-child(4){
+    width: 18rem;
+    position: absolute;
+    top: 12.5rem;
+    left: 4rem;
+    animation: right_in 1s ease both;
+    animation-delay: 1s;
+}
+.box4_2{
+    width: 100%;
+    height: 25%;
+    overflow: hidden;
+    padding-left: calc(50% - 9rem);
+    animation: flash 1s ease both;
+    animation-delay: 3s;
+}
+.box4_2 img{
+	width: 18rem;
+}
+
+.box4_3{
+	width: 100%;
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+    animation: flash 1s ease both;
+    animation-delay: 4s;
+}
+#p4_btn{
+    width: 18rem;
+    position: absolute;
+    top: 4rem;
+    left: calc(50% - 9rem);
+}
+#p4_btn:active{
+	background: url(../img_project1/p4_btn_down.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+
+.box4_3 input,select{
+	position: absolute;
+	padding: 1% 2%;
+    border: 3px solid black;
+    border-radius: 0.4rem;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.box4_3 input{
+    width: 8rem;
+    height: 1.7rem;
+    top: 1rem;
+    left: 2rem;
+}
+.box4_3 select{
+    width: 9rem;
+    top: 1rem;
+    left: 12rem;
+    color: rgba(0,0,0,0.6);
+}
+.box4_3 option{
+	font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black;
+}
+#p4_dialog{
+	width: 23.4375rem;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+
+}
+#p4_dialog img{
+	width: 14rem;
+	position: absolute;
+	top: 40%;
+	left: calc(50% - 7rem);
+}
+
+/*page05*/
+.box5_1{
+	width: 100%;
+	height: 10%;
+	overflow: hidden;
+}
+#p5_back{
+    width: 4rem;
+    margin: 2% 1%;	
+}
+.box5_2{
+	width: 96%;
+	height: 86%;
+	background-image: url(../img_project1/p5_black.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 0 2%;
+	padding-top: 2%;
+	position: relative;
+	
+}
+#p5_t1,#p5_t2 {
+	width: 97%;
+	position: absolute;
+	top: 6rem;
+	font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 2.2em;
+    color: white;
+    text-align: right;
+}
+#p5_t2{
+    top: 9rem;
+}
+
+table{
+	width: 100%;
+	height: 60%;
+	position: absolute;
+	bottom: 4%;
+}
+tr,td{
+	margin: 0;
+	padding: 0;
+}
+table td{
+	width: 25%;
+}
+table button{
+	width: 100%;
+	height: 100%;
+	
+	font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    
+	outline: none;
+	border: none;
+}
+.food{
+	background-color: white;
+}
+#clean,#add,#equal{
+	background-color: rgb(255,207,16);
+}
+#add{
+	animation: scale 1s  linear infinite both;
+	animation-play-state: paused;
+}
+@keyframes scale{
+	from{
+		font: 1.5;
+	}
+	to{
+		font-size: 1.54em;
+	}
+}
+
+#p5_dialog{
+    width: 23.4375rem;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+#p5_dialog img:nth-child(1){
+    width: 18rem;
+    position: absolute;
+    top: 15%;
+    left: calc(50% - 9rem);
+}
+#p5_dialog img:nth-child(2){
+    width: 18rem;
+    position: absolute;
+    top: 16.5%;
+    left: calc(50% - 9rem);
+}
+#p5_dialog p{
+	width: 57%;
+	font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    text-align: left;
+    position: absolute;
+  
+    left: 27.5%;
+}
+#p5_dialog_name{
+	top:27%;
+}
+#p5_dialog_grade{
+	top: 32%;
+}
+#p5_dialog_result{
+	top: 37%;
+}
+
+

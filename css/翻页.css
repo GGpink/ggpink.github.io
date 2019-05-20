@@ -1,0 +1,48 @@
+.hide{
+	display: none;
+}
+.in_top{
+	animation: Show_Top 1s ease-out both;
+}
+.out_top{
+	animation: Out_Top 1s ease-out both;
+}
+.in_down{
+	animation: Show_Down 1s ease-out both;
+}
+.out_down{
+	animation: Out_Down 1s ease-out both;
+}
+
+@keyframes Show_Top{
+	from{
+		transform: translateY(100%);
+	}
+	to{
+		transform: translateY(0%);
+	}
+}
+@keyframes Out_Top{
+	from{
+		transform: translateY(0%);
+	}
+	to{
+		transform: translateY(-100%);
+	}
+}
+@keyframes Show_Down{
+	from{
+		transform: translateY(-100%);
+	}
+	to{
+		transform: translateY(0%);
+	}
+}
+@keyframes Out_Down{
+	from{
+		transform: translateY(0%);
+	}
+	to{
+		transform: translateY(100%);
+	}
+}
