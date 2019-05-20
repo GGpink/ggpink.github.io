@@ -76,7 +76,7 @@ window.onload = function() {
 		if (music_c) {
 			music_div.style.backgroundImage = "url(img_project1/bgm_off.png)";
 			music_div.style.animationPlayState = "paused";
-			music.pause();
+			music.stop();
 			music_c = false;
 		} else {
 			music_div.style.backgroundImage = "url(img_project1/bgm_on.png)";
