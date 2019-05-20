@@ -150,7 +150,7 @@ window.onload = function() {
   
 	
 	_p4_btn.onclick = function(){
-alert(this);
+
 		name = _name.value;
 		work = _work.value;
 		console.log(name, work);
