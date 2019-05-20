@@ -17,7 +17,39 @@ for(var i=0;i<_arrow.length;i++){
 	});
 }
 
+//PC端
+document.addEventListener('mousedown',function(e){
+	startY = e.pageY;
+	
+	// console.log(e);
+	
+	document.onmousemove=function(e){
+		endY =  e.pageY;
+		dis = startY - endY;
+		// console.log(e);
+	}
+	
+})
 
+document.addEventListener('mouseup',function(e){
+	document.onmousemove=null;
+	
+	console.log(dis);
+	if(dis>50 && canmove){
+			
+			if(dis>0){			
+				pageTop(index);
+				qingling();
+				canmove=false;				
+			}else{				
+	//			pageDown(index);
+	//			qingling();
+				//canmove=false;
+			}			
+		}
+})
+
+//移动端
 document.addEventListener("touchstart",function(e){
 	var Touch=e.touches[0];
 	startY=Touch.pageY;
