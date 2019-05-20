@@ -140,14 +140,16 @@ window.onload = function() {
 	var _work = document.getElementById('work');
 	var _p4_btn = document.getElementById('p4_btn');
 	var _p4_dialog = document.getElementById('p4_dialog');
-	_p4_dialog.close();
+	
 	var _p4_dialog_img = _p4_dialog.firstElementChild;
 	var name, work;
 
 	var _student = ['辣条', '雪糕', '软糖'];
 	var _Working = ['米粉', '肠粉', '盒饭'];
 
-	_p4_btn.onclick = function() {
+  
+	
+	_p4_btn.onclick = function(){
 
 		name = _name.value;
 		work = _work.value;
@@ -155,27 +157,29 @@ window.onload = function() {
 
 		if (name == '' && !name) {
 			_p4_dialog_img.src = 'img_project1/p4_dialog_t1.png';
-			_p4_dialog_img.style.display='block';
+			_p4_dialog.style.display='block';
 
-			// _p4_dialog.show(); 
+			_p4_dialog.show(); 
 		} else if (name.length < 2 || name.length > 4) {
 			_p4_dialog_img.src = 'img_project1/p4_dialog_t3.png';
-			_p4_dialog_img.style.display='block';
+			_p4_dialog.style.display='block';
 			
-			// _p4_dialog.show();
+			_p4_dialog.show();
 		} else if (!work) {
 			_p4_dialog_img.src = 'img_project1/p4_dialog_t2.png';
-			_p4_dialog_img.style.display='block';
+			_p4_dialog.style.display='block';
 			
-			// _p4_dialog.show();
+			_p4_dialog.show();
 		} else {
-			index++;
+// 			index++;
+// 
+// 			_pages[3].classList.add('out_top');
+// 			_pages[3].classList.remove('in_top', 'in_down', 'out_down');
+// 
+// 			_pages[4].classList.add('in_top');
+// 			_pages[4].classList.remove('out_top', 'in_down', 'out_down', 'hide');
 
-			_pages[3].classList.add('out_top');
-			_pages[3].classList.remove('in_top', 'in_down', 'out_down');
-
-			_pages[4].classList.add('in_top');
-			_pages[4].classList.remove('out_top', 'in_down', 'out_down', 'hide');
+      pageTop(index);
 
 			for (i = 6; i < _food.length; i++) {
 				if (work == 1) {
@@ -188,6 +192,7 @@ window.onload = function() {
 	}
 
 	_p4_dialog.onclick = function() {
+		this.style.display='none';
 		_p4_dialog.close();
 	}
 
