@@ -150,8 +150,46 @@ window.onload = function() {
   
 	
 	_p4_btn.onclick = function(){
-                       pageTop(index);
-		alert("11");
+           alert(this);
+		
+		name = _name.value;
+		work = _work.value;
+		console.log(name, work);
+
+		if (name == '' && !name) {
+			_p4_dialog_img.src = 'img_project1/p4_dialog_t1.png';
+			_p4_dialog.style.display='block';
+
+			_p4_dialog.show(); 
+		} else if (name.length < 2 || name.length > 4) {
+			_p4_dialog_img.src = 'img_project1/p4_dialog_t3.png';
+			_p4_dialog.style.display='block';
+			
+			_p4_dialog.show();
+		} else if (!work) {
+			_p4_dialog_img.src = 'img_project1/p4_dialog_t2.png';
+			_p4_dialog.style.display='block';
+			
+			_p4_dialog.show();
+		} else {
+			index++;
+
+			_pages[3].classList.add('out_top');
+			_pages[3].classList.remove('in_top', 'in_down', 'out_down');
+
+			_pages[4].classList.add('in_top');
+			_pages[4].classList.remove('out_top', 'in_down', 'out_down', 'hide');
+
+     
+
+			for (i = 6; i < _food.length; i++) {
+				if (work == 1) {
+					_food[i].innerText = _Working[i - 6];
+				} else {
+					_food[i].innerText = _student[i - 6];
+				}
+			}
+		}
 	}
 
 	_p4_dialog.onclick = function() {
