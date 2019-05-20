@@ -156,18 +156,19 @@ window.onload = function() {
 		work = _work.value;
 		console.log(name, work);
 
+		
 		if (name == '' && !name) {
-			_p4_dialog_img.src = 'img_project1/p4_dialog_t1.png';
+			_p4_dialog_img.src = "img_project1/p4_dialog_t1.png";
 			_p4_dialog.style.display='block';
 
 			_p4_dialog.show(); 
 		} else if (name.length < 2 || name.length > 4) {
-			_p4_dialog_img.src = 'img_project1/p4_dialog_t3.png';
+			_p4_dialog_img.src = "img_project1/p4_dialog_t3.png";
 			_p4_dialog.style.display='block';
 			
 			_p4_dialog.show();
 		} else if (!work) {
-			_p4_dialog_img.src = 'img_project1/p4_dialog_t2.png';
+			_p4_dialog_img.src = "img_project1/p4_dialog_t2.png";
 			_p4_dialog.style.display='block';
 			
 			_p4_dialog.show();
