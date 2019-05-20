@@ -1,9 +1,16 @@
 window.onload = function() {
+	//解决自动播放
+	
+	
+	
 
 	var loadingnum = document.getElementById("loadingnum");
-	var num = 0;
+	var num = 30;
 
 	var music_div = document.getElementById("music_div");
+
+	
+	
 	var music = document.getElementById("music");
 	var music_c = 0;
 	
@@ -37,6 +44,10 @@ window.onload = function() {
 
 
 
+
+
+
+
 	loading();
 	
 	function loading() {
@@ -45,27 +56,50 @@ window.onload = function() {
 
 			num = num + 1;
 
-			loadingnum.innerHTML = num + "%";
+			loadingnum.innerText = num + "%";
 
 			if (num>=100) {
 				clearInterval(time);
-				loadingnum.innerHTML = "100%";
-				pageTop(index);
+				loadingnum.innerText = "100%";
+				loadingnum.style.transform='scale(0)';
+				
 
-         
-				 
-				//自动触发事件click来躲避自动播放限制
-				var myEvent  = new Event('click'); 
-				music_div.dispatchEvent(myEvent);
-// 
-        music_div.style.display = "block";
+				
+				
+				setTimeout(function(){
+					loadingnum.innerText = "点击开始";
+					loadingnum.style.transform='scale(1)';
+					
+					loadingnum.onclick=function(){
+						pageTop(index);
+						music_div.style.display = "block";
+
+					}
+					
+				},400);
+				
+				
+				
+				
+
+         		 
+	//自动触发事件click来躲避自动播放限制
+// 				var myEvent  = new Event('click'); 
+// 				music_div.dispatchEvent(myEvent);
+
+// 	music_div.innerHTML='<audio src="media_project1/bgm.mp3" loop="loop" id="music"></audio>';
+// 	
+// 	window.addEventListener('touchstart',function(){
+// 		 music.play();
+// 	});  
+			 
 			
 				
 
 			}
 
 
-		}, 10);
+		}, 100);
 	}
 
 
