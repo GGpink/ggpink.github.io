@@ -103,7 +103,7 @@ window.onload = function() {
 			}
 
 
-		}, 100);
+		}, 10);
 	}
 
 
@@ -149,14 +149,13 @@ window.onload = function() {
 
   
 	
-	_p4_btn.onclick = function(){
-           
+	_p4_btn.onclick=function(){
+    
 		
 		name = _name.value;
 		work = _work.value;
-		console.log(name, work);
-
-		
+		console.log(name, work,_p4_dialog_img);
+ 
 		if (name == '' && !name) {
 			_p4_dialog_img.src = "img_project1/p4_dialog_t1.png";
 			_p4_dialog.style.display='block';
@@ -284,13 +283,13 @@ window.onload = function() {
 			_p5_dialog.show();
 			if (_grade > 250) {
 				_p5_dialog_result.innerText = '结果：优';
-				_p5_dialog_img.src = 'img_project1/p5_dialog_you.png';
+				_p5_dialog_img.src = "img_project1/p5_dialog_you.png";
 			} else if (_grade > 199) {
 				_p5_dialog_result.innerText = '结果：良';
-				_p5_dialog_img.src = 'img_project1/p5_dialog_liang.png';
+				_p5_dialog_img.src = "img_project1/p5_dialog_liang.png";
 			} else {
 				_p5_dialog_result.innerText = '结果：差';
-				_p5_dialog_img.src = 'img_project1/p5_dialog_cha.png';
+				_p5_dialog_img.src = "img_project1/p5_dialog_cha.png";
 			}
 
 			_p5_dialog_name.innerText = '名字：' + name;
