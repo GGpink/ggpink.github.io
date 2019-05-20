@@ -4,11 +4,10 @@ window.onload = function() {
 	var num = 0;
 
 	var music_div = document.getElementById("music_div");
-	// var music = document.getElementById("music");
+	var music = document.getElementById("music");
 	var music_c = true;
 	
-	//audio.js
-  var music=AudioFX('media_project1/bgm',{formats:['mp3'],volume:1,pool:20,loop:true});
+
   
 
 
@@ -65,7 +64,7 @@ window.onload = function() {
 			}
 
 
-		}, 100);
+		}, 10);
 	}
 
 
@@ -76,7 +75,7 @@ window.onload = function() {
 		if (music_c) {
 			music_div.style.backgroundImage = "url(img_project1/bgm_off.png)";
 			music_div.style.animationPlayState = "paused";
-			music.stop();
+			music.pause();
 			music_c = false;
 		} else {
 			music_div.style.backgroundImage = "url(img_project1/bgm_on.png)";
