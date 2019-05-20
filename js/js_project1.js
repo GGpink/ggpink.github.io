@@ -150,23 +150,8 @@ window.onload = function() {
   
 	
 	_p4_btn.onclick = function(){
-                           index++;
-
-			_pages[3].classList.add('out_top');
-			_pages[3].classList.remove('in_top', 'in_down', 'out_down');
-
-			_pages[4].classList.add('in_top');
-			_pages[4].classList.remove('out_top', 'in_down', 'out_down', 'hide');
-
-     
-
-			for (i = 6; i < _food.length; i++) {
-				if (work == 1) {
-					_food[i].innerText = _Working[i - 6];
-				} else {
-					_food[i].innerText = _student[i - 6];
-				}
-			}
+                       pageTop(index);
+		alert("11");
 	}
 
 	_p4_dialog.onclick = function() {
