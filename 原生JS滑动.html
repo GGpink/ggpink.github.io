@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>原生js移动端整页滑屏框架</title>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Verdana;
+      }
+      body,
+      html {
+        height: 100%;
+        background-color: #000000;
+      }
+      .wrap {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .wrap2 {
+        width: 100%;
+        height: 1000%;
+        transform: translateY(-10%);
+      }
+      .page {
+        width: 100%;
+        height: 10%
+      }
+      .page {
+        background-color: #fdfdfd;
+        font-size: 100px;
+        line-height: 400px;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap" id="wrap">
+      <div class="wrap2" id="wrap2">
+        <div class="page" style="background-color:#dddddd;">第六页</div>
+        <div class="page">第一页</div>
+        <div class="page" style="background-color:#dddddd;">第二页</div>
+        <div class="page">第三页</div>
+        <div class="page" style="background-color:#dddddd;">第四页</div>
+        <div class="page">第五页</div>
+        <div class="page" style="background-color:#dddddd;">第六页</div>
+        <div class="page">第一页</div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var pages = function(obj) {
+        var box = document.getElementById(obj.wrap);
+        var box2 = document.getElementById(obj.wrap2);
+        var len = obj.len; // 一共有几页
+        var n = obj.n; // 记录当前页面数
+        var startY, // startY：定义滑动的初始值
+        moveY, // moveY：移动过程的值
+        cliH; // cliH：移动端屏幕的高度
+
+        //封装获取屏幕高度的函数
+        var getH = function() {
+          cliH = document.body.clientHeight
+        };
+        getH();
+        window.addEventListener('resize', getH, false);
+
+        //touchStart事件绑定
+        box.addEventListener("touchstart", function(event) {
+           if(!event.touches.length) {
+            return;
+          }
+          startY = event.touches[0].pageY;
+          moveY = 0;
+        }, false);
+        //touchMove
+        box.addEventListener("touchmove", function(event) {
+          if(!event.touches.length) {
+            return;
+          }
+          moveY = event.touches[0].pageY - startY;
+          //根据手指的位置移动页面
+          box2.style.transform = 'translateY(' + (-n * cliH + moveY) + 'px)'; 
+        }, false);
+        //touchEnd
+        box.addEventListener("touchend", function(event) {
+          //最前页控制
+          if(n == 0){
+          	n = len - 2;//切换到最后一页
+          	box2.style.transition = "none";
+          	box2.style.transform = 'translateY(' + (-n * 10) + '%)'; //根据百分比位置移动页面
+          	 // 先看页面效果 不用管这行代码  修复谷歌的bug
+          	box2.offsetHeight;
+          }
+          // 最后页控制
+          if(n == len-1){
+          	 n = 1;
+          	 box2.style.transition = "none";
+          	  box2.style.transform = 'translateY(' + (-n * 10) + '%)'; //根据百分比位置移动页面
+          	   // 先看页面效果 不用管这行代码  修复谷歌的bug
+          	  box2.offsetHeight;
+          }
+
+         //位移小于+-50的不翻页
+          if(moveY < -50){
+          	n++;
+
+          	box2.style.transition = "0.3s linear";
+          	 box2.style.transform = 'translateY(' + (-n * 10) + '%)'; //根据百分比位置移动页面
+          } 
+          if(moveY > 50) {
+          	n--;
+          	console.log(n)
+          	
+          	 box2.style.transform = 'translateY(' + (-n * 10) + '%)'; //根据百分比位置移动页面
+          	 box2.style.transition = "0.3s linear";
+          }
+         
+          //重定位
+          // box2.style.transform = 'translateY(' + (-n * 10) + '%)'; //根据百分比位置移动页面
+         
+        }, false);
+      };
+
+      //调用封装好的page方法
+      pages({
+        wrap: 'wrap', //.wrap的id
+        wrap2: 'wrap2', //.wrap2的id
+        len: 8, //一共有几页
+        n: 1 //页面一打开默认在第几页？第一页就是0，第二页就是1
+      });
+    </script>
+  </body>
+</html>
