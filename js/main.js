@@ -22,6 +22,7 @@ $(document).ready(function(){
 				},1000);
 				
 				$("#music").trigger("play");
+				$(".music-wrap").css("display","block");
                 
 			})
 
@@ -38,7 +39,7 @@ $(document).ready(function(){
 					
 		}
 		
-	},100);
+	},200);
    
    
    
