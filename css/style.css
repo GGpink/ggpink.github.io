@@ -1262,7 +1262,7 @@ li {
 .flash_show{
 	animation: flash .3s linear both;
 	-webkit-animation: flash .3s linear both;
-	animation-play-state: paused;
+	
 	
 }
 /* .swiper-container{
