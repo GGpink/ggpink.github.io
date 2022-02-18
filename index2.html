@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+		<title></title>
+		<link rel="stylesheet"  type="text/css" href="css/翻页.css"/>
+		
+		<script type="text/javascript" src="js/适配.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style_project1.css" />
+			
+	</head>
+	<body>
+		<div id="music_div">
+		  <audio src="media_project1/bgm.mp3" loop="loop" id="music"></audio> 
+		</div>
+		
+		<div class="show">
+			
+			<div class="page page01">
+				
+				<div class="box1">
+					
+					<img src="img_project1/p1_Loading.png"/>
+					<p>L O A D I N G</p>
+					<span>...</span>
+					<h2 id="loadingnum">0%</h2>
+					
+				</div>
+				
+				
+			</div>
+			
+			<div class="page page02 hide">
+				
+				<div class="box2_1">					
+					<img src="img_project1/p2_box1.png"/>
+					<img src="img_project1/p2_lun.png"/>
+					<img src="img_project1/p2_lun.png"/>
+				</div>
+				
+				<div class="box2_2">
+					
+					<div class="p2_text">
+						<p>随着农业技术的发展</p>
+						<p>本应成为主食的五谷杂粮</p>
+						<p>却渐渐被快餐零食所替代</p>
+						<p>人们的健康水平</p>
+						<p>也在餐饮条件的变化下</p>
+						<p>变得参差不齐</p>				
+					</div>
+					<img src="img_project1/p2_box2.png"/>
+					
+				</div>
+				
+				<div class="box2_3">
+					<img src="img_project1/p2_box3.png"/>
+				</div>
+				
+				<div class="box2_4 arrow">
+					<img src="img_project1/arrow.png" />
+				</div>
+				
+				
+			</div>
+			
+			<div class="page page03 hide">
+				
+				<div class="box3_1">
+					<img src="img_project1/p3_text1.png" />
+				</div>
+				
+				<div class="box3_2">
+					<img src="img_project1/p3_text2.png" />
+				</div>
+				
+				<div class="box3_3 arrow">
+					<img src="img_project1/arrow.png"/>
+				</div>
+				
+			</div>
+			
+			<div class="page page04 hide ">
+			
+	
+				<div class="box4_1">
+					<img src="img_project1/p4_circle_bg.png" alt="" />				
+					<img src="img_project1/p4_left_in.png" alt="" />
+					<img src="img_project1/p4_top_in.png" alt="" />
+					<img src="img_project1/p4_right_in.png" alt="" />
+					
+				</div>
+				
+				<div class="box4_2">
+					<img src="img_project1/p4_box4_2.png" alt="" />
+				</div>
+				
+				<div class="box4_3">
+					<img src="img_project1/p4_btn_up.png" id="p4_btn" ></img>
+					
+					
+					<input type="text" id="name" placeholder="输入名字" />
+					
+					<select value="0" id="work">
+						<option value="0" hidden="hidden">选择职业</option>
+						<option value="1">上班族</option>
+						<option value="2">学生</option>
+					</select>
+				</div>
+				
+				<dialog id="p4_dialog" >
+					<img src="img_project1/p4_dialog_t1.png" />
+			        </dialog>
+				
+			</div>
+	
+			<div class="page page05 hide">
+				<div class="box5_1">
+					<img src="img_project1/p5_back.png" alt="" id="p5_back" />
+				</div>
+				
+				<div class="box5_2">
+					
+					<p id="p5_t1">请点击按键</p>
+					<p id="p5_t2">开始计算</p>
+					<table>
+						<tr>
+							<td><button class="food">大豆</button></td>
+							<td><button class="food">绿豆</button></td>
+							<td><button class="food">红豆</button></td>
+							<td><button id="clean">AC</button></td>
+						</tr>
+						<tr>
+							<td><button class="food">稻子</button></td>
+							<td><button class="food">玉米</button></td>
+							<td><button class="food">黑豆</button></td>
+							<td><button id="add">+</button></td>
+						</tr>
+						<tr>
+							<td><button class="food ">软糖</button></td>
+							<td><button class="food ">雪糕</button></td>
+							<td><button class="food ">辣条</button></td>
+							<td><button id="equal">=</button></td>
+						</tr>
+					</table>
+				</div>
+				<dialog id="p5_dialog" >
+					<img src="img_project1/p5_dialog_bg.png" />
+					<img src="img_project1/p5_dialog_you.png" id="p5_dialog_img"/>
+					<p id="p5_dialog_name">名字：</p>
+					<p id="p5_dialog_grade">分数：</p>
+					<p id="p5_dialog_result">结果：</p>
+				</dialog>
+				
+			</div>
+		</div>
+	</body>
+    <script type="text/javascript" src="js/翻页_project1.js"></script>
+	
+	<script type="text/javascript" src="js/js_project1.js"></script>
+
+</html>
